@@ -149,6 +149,7 @@ section{
     text-align:right;
 }
 .project-entry {
+    display:block;
     border-color: var(--header-bg-color);
     border-width: 4px;
     border-radius: 0px;
@@ -158,6 +159,9 @@ section{
     background-color:var(--body-bg-color);
     position:relative;
     background-position: center;
+}
+.project-entry a:focus {
+    outline: none;
 }
 #run-buddy {
     width: 100%;
