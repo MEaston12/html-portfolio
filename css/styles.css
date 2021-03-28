@@ -23,7 +23,7 @@ body {
     background-color: var(--body-bg-color);
     height:100%;
     min-height: 100vh;
-    padding: 0% 20% 0% 20%;
+    padding: 0% 30% 0% 30%;
 }
 
 header{
@@ -50,7 +50,19 @@ p {
     color: var(--text-font-color);
 }
 
+@media screen and (max-width:1200px){
+    body {
+        padding: 0% 20% 0% 20%;
+    }
+}
+
 @media screen and (max-width:768px){
+    body {
+        padding: 0% 10% 0% 10%;
+    }
+}
+
+@media screen and (max-width:576px){
     body {
         padding: 0%;
     }
