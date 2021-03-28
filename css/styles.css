@@ -1,17 +1,21 @@
-/*General stuff*/
-*{
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    margin: 0%;
-    padding: 0%;
-}
-
+/*Variables*/
 :root {
     --body-bg-color:#252526;
     --main-bg-color:#1e1e1e;
     --header-bg-color: #3c3c3c;
     --heading-font-color: #ffffff;
     --text-font-color: #eeeeee;
+    --fresh-link-color: #7cdcfe;
+    --clicked-link-color: #7c0bfe;
+}
+
+/*General stuff*/
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    color: var(--text-font-color);
 }
 
 html {
@@ -23,7 +27,9 @@ body {
     background-color: var(--body-bg-color);
     height:100%;
     min-height: 100vh;
-    padding: 0% 30% 0% 30%;
+    padding: 0% 20% 0% 20%;
+    display:flex;
+    flex-direction: column;
 }
 
 header{
@@ -33,10 +39,35 @@ header{
 
 main{
     background-color: var(--main-bg-color);
-    min-height: 100vh;
+    min-height: 100%;
+    flex:auto;
 }
 
+section{
+    padding:1em;
+}
+
+/*ID specific elements*/
+#contact{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    padding:0;
+}
+#contact-info{
+    width:50%;
+    padding: 1em;
+}
+#contact-info ul{
+    margin-left:2em;
+}
+
+
 /*Elements*/
+img {
+    width:50%;
+}
+
 h1,
 h2,
 h3,
@@ -47,18 +78,31 @@ h6 {
 }
 
 p {
+    margin-top:1rem;
     color: var(--text-font-color);
+}
+
+li {
+    margin-top:1rem;
+}
+
+a {
+    color: var(--fresh-link-color);
+}
+
+a:active {
+    color:var(--clicked-link-color);
 }
 
 @media screen and (max-width:1200px){
     body {
-        padding: 0% 20% 0% 20%;
+        padding: 0% 12% 0% 12%;
     }
 }
 
 @media screen and (max-width:768px){
     body {
-        padding: 0% 10% 0% 10%;
+        padding: 0% 0% 0% 0%;
     }
 }
 
