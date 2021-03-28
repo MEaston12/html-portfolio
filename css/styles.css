@@ -8,6 +8,7 @@
     --link-fresh-color: #7cdcfe;
     --link-hover-color: #ce9178;
     --link-clicked-color: hsl(268, 100%, 67%);
+    --project-gutter: 1%;
 }
 
 /*General stuff*/
@@ -18,62 +19,11 @@
     padding: 0%;
     color: var(--text-font-color);
 }
-
 html {
     min-height: 100vh;
 }
 
-/*Semantics/Groupings*/
-body {
-    background-color: var(--body-bg-color);
-    height:100%;
-    min-height: 100vh;
-    padding: 0% 22% 0% 22%;
-    display:flex;
-    flex-direction: column;
-}
-
-header{
-    background-color: var(--header-bg-color);
-    padding: 1em;
-}
-
-main{
-    background-color: var(--main-bg-color);
-    min-height: 100%;
-    flex:auto;
-}
-
-section{
-    padding:1em;
-}
-
-/*ID specific elements*/
-#contact{
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction: row;
-    width:100%;
-    padding:0;
-}
-#contact-info{
-    width:50%;
-    min-width:325px;
-    padding: 1em;
-}
-#contact-info ul{
-    margin-left:2em;
-}
-#contact-image {
-    flex-grow:1;
-    flex-shrink:1;
-    max-width: 50%;
-    min-width: 25%;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-/*Elements*/
+/*Content*/
 hr {
     margin:1em;
     background-color:var(--header-bg-color);
@@ -107,6 +57,98 @@ a:hover {
     color: var(--link-hover-color);
 }
 
+/*Semantics/Groupings*/
+body {
+    background-color: var(--body-bg-color);
+    height:100%;
+    min-height: 100vh;
+    padding: 0% 22% 0% 22%;
+    display:flex;
+    flex-direction: column;
+}
+header{
+    background-color: var(--header-bg-color);
+    padding: 1em;
+}
+main{
+    background-color: var(--main-bg-color);
+    min-height: 100%;
+    flex:auto;
+}
+section{
+    padding:1em;
+}
+
+/*ID specific elements*/
+#contact{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    width:100%;
+    padding:0;
+}
+#contact-info{
+    width:50%;
+    min-width:325px;
+    padding: 1em;
+}
+#contact-info ul{
+    margin-left:2em;
+}
+#contact-image {
+    flex-grow:1;
+    flex-shrink:1;
+    max-width: 50%;
+    min-width: 25%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/*Projects*/
+#project-list {
+    display:flex;
+    flex-wrap:wrap;
+}
+.project-entry {
+    border-color: var(--header-bg-color);
+    border-width: 4px;
+    border-radius: 0px;
+    margin: var(--project-gutter);
+    width: calc(50% - 2*var(--project-gutter));
+    height: 250px;
+    background-color:var(--body-bg-color);
+    position:relative;
+    background-position: center;
+}
+#run-buddy {
+    width: 100%;
+    height: 350px;
+    background-image: url("../assets/run-friend.jpeg");
+    background-position: bottom;
+}
+#ph-proj-1 {
+    background-image: url("../assets/coding.jpeg");
+}
+#ph-proj-2 {
+    background-image: url("../assets/dyson-sphere.jpg");
+    background-size: cover;
+    background-position:top;
+}
+#ph-proj-3 {
+    background-image: url("../assets/MEGACODING.jpeg");
+}
+#ph-proj-4 {
+    background-image: url("../assets/universe.jpeg");
+}
+.project-textbox {
+    position:absolute;
+    top:50%;
+    min-width:25%;
+    background-color: var(--header-bg-color);
+    padding:1em;
+}
+
+/*Media Queries*/
 @media screen and (max-width:1200px){
     body {
         padding: 0% 14% 0% 14%;
