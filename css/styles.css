@@ -140,6 +140,14 @@ section{
     display:flex;
     flex-wrap:wrap;
 }
+.project-textbox {
+    position:absolute;
+    top:50%;
+    min-width:25%;
+    background-color: var(--header-bg-color);
+    padding:1em;
+    text-align:right;
+}
 .project-entry {
     border-color: var(--header-bg-color);
     border-width: 4px;
@@ -170,13 +178,6 @@ section{
 }
 #ph-proj-4 {
     background-image: url("../assets/universe.jpeg");
-}
-.project-textbox {
-    position:absolute;
-    top:50%;
-    min-width:25%;
-    background-color: var(--header-bg-color);
-    padding:1em;
 }
 
 /*Media Queries*/
