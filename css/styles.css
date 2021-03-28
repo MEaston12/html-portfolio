@@ -4,8 +4,9 @@
     --main-bg-color:#1e1e1e;
     --header-bg-color: #3c3c3c;
     --heading-font-color: #ffffff;
-    --text-font-color: #eeeeee;
+    --text-font-color: #ffffff;
     --fresh-link-color: #7cdcfe;
+    --hover-link-color: #ce9178;
     --clicked-link-color: #7c0bfe;
 }
 
@@ -86,12 +87,14 @@ li {
     margin-top:1rem;
 }
 
-a {
+a:link {
     color: var(--fresh-link-color);
 }
-
-a:active {
+a:visited {
     color:var(--clicked-link-color);
+}
+a:hover {
+    color: var(--hover-link-color);
 }
 
 @media screen and (max-width:1200px){
