@@ -163,14 +163,18 @@ section{
 .project-entry a:focus {
     outline: none;
 }
+.project-entry:first-child{
+    height:350px;
+    width:100%;
+}
 #run-buddy {
-    width: 100%;
-    height: 350px;
     background-image: url("../assets/run-friend.jpeg");
     background-position: bottom;
 }
-#ph-proj-1 {
-    background-image: url("../assets/coding.jpeg");
+#lets-get-physical {
+    background-image: url("../assets/lets-get-physical.png");
+    background-size:cover;
+    background-position:top;
 }
 #ph-proj-2 {
     background-image: url("../assets/dyson-sphere.jpg");
